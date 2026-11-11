@@ -90,6 +90,9 @@ $$E_{RGB} = \sqrt{\frac{e_R^2 + e_G^2 + e_B^2}{3}} \le 15.0$$
 * **Target 2: Hijau Botol (K3 B2):** Error awal $166.23 \rightarrow \mathbf{23.55}$ (Reduksi 85.8%).
 * **Target 3: Ungu Indigo (M3 B3):** Error awal $160.49 \rightarrow \mathbf{35.12}$ (Reduksi 78.1%).
 
+### Validasi Visual Swatch Warna (Target vs Awal vs Akhir)
+![Visual Color Matching Swatches](results/visual_color_matching_swatches.png)
+
 ---
 
 ## 📁 Struktur Direktori Repositori
@@ -104,6 +107,7 @@ $$E_{RGB} = \sqrt{\frac{e_R^2 + e_G^2 + e_B^2}{3}} \le 15.0$$
 │   ├── characterize_mixing.py        # Pemodelan matriks respons subtraktif pewarna
 │   ├── fuzzy_controller.py           # Perancangan kontroler Fuzzy Mamdani (skfuzzy)
 │   ├── closed_loop_controller.py     # Engine closed-loop (Mode simulate & interactive)
+│   ├── generate_color_swatches.py    # Generator perbandingan swatch warna visual
 │   └── build_presentation.py         # Generator slide presentasi PPTX Dashboard Telkom
 │
 ├── models/                           # Bobot model terlatih PyTorch
@@ -116,6 +120,7 @@ $$E_{RGB} = \sqrt{\frac{e_R^2 + e_G^2 + e_B^2}{3}} \le 15.0$$
 │   └── log_simulasi_closed_loop_fuzzy.csv
 │
 ├── results/                          # Grafik visual & dokumentasi eksperimen
+│   ├── visual_color_matching_swatches.png
 │   ├── grafik_loss_pelatihan_ann.png
 │   ├── karakterisasi_respon_pewarna.png
 │   ├── grafik_fungsi_keanggotaan_fuzzy.png
@@ -149,10 +154,11 @@ python src/train_ann.py
 ```
 *Melatih Model 1 dan Model 2, mengevaluasi MAE data unseen, menyimpan bobot ke `models/model_ann_koreksi_terbaik.pt`, dan membuat kurva konvergensi loss.*
 
-### 3. Menjalankan Karakterisasi & Visualisasi Fuzzy (Tahap II)
+### 3. Menjalankan Karakterisasi, Fuzzy, dan Generator Swatch
 ```bash
 python src/characterize_mixing.py
 python src/fuzzy_controller.py
+python src/generate_color_swatches.py
 ```
 
 ### 4. Menjalankan Kontroler Closed-Loop Terintegrasi
