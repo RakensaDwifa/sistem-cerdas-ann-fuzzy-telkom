@@ -1,0 +1,16 @@
+=== HASIL KARAKTERISASI PENCAMPURAN PEWARNA (TOR TAHAP II) ===
+Model Pergeseran Respons Subtraktif:
+Kanal R: delta R = (+0.51 * dM) + (+1.57 * dK) + (-0.18 * dB) | Base=173.4
+Kanal G: delta G = (-1.78 * dM) + (-0.34 * dK) + (+7.12 * dB) | Base=161.6
+Kanal B: delta B = (+7.35 * dM) + (-1.49 * dK) + (+17.67 * dB) | Base=65.1
+
+Kaidah Subtraktif Fisis Terkonfirmasi:
+1. Penambahan Tetes Merah (M):
+   - Efek dominan: Mengurangi kanal Hijau (G) dan Biru (B) secara signifikan.
+   - Gradien G/drop: -1.78, Gradien B/drop: 7.35
+2. Penambahan Tetes Kuning (K):
+   - Efek dominan: Mengurangi kanal Biru (B) paling tajam (daya serap spektrum biru sangat kuat).
+   - Gradien B/drop: -1.49
+3. Penambahan Tetes Biru (B):
+   - Efek dominan: Mengurangi kanal Merah (R) dan Hijau (G).
+   - Gradien R/drop: -0.18, Gradien G/drop: 7.12

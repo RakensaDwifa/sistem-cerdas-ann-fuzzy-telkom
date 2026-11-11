@@ -1,0 +1,4 @@
+Konfigurasi,MAE R,MAE G,MAE B,Mean MAE,Penurunan Error (%)
+Sebelum Koreksi (Baseline),36.27,36.02,28.63,33.64,0.0%
+Model 1 (1 Hidden Layer: 16),11.84,12.46,9.99,11.43,66.0%
+Model 2 (2 Hidden Layer: 32-16),11.52,11.59,10.80,11.30,66.4%
